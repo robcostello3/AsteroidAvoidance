@@ -29,5 +29,13 @@
         <br>
         <button type="submit">Enter Game Entry</button>
     </form> -->
+
+    <canvas width="800" height="600" style="border:1px solid black; background-color: black;"></canvas>
+    <form method="post" action="/saveGame " class="highscore" onsubmit = "return checkForm()">
+        <input type="text" placeholder="Enter your name for High Score" style="position:absolute; left:300px; top:400px; width:200px;" />
+        <button style="position:absolute; left:350px; top:450px; width:100px;" type="submit">Submit</button>
+    </form>
+    <script src="views/script.js"></script>
+
 </body>
 </html>
