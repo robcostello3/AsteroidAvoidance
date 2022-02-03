@@ -300,6 +300,8 @@ gameStates[2] = function(){
         ctx.fillText("Press Enter to Start", c.width/2, c.height/2 + 20);
         ctx.restore();
 
+        
+
     }
     else{
         ctx.save();
@@ -312,6 +314,8 @@ gameStates[2] = function(){
         ctx.fillText("Press Enter to Start", c.width/2, c.height/2 + 20);
         ctx.restore();
     }
+    
+    document.getElementById("score").innerHTML = score;
 
     
 }

@@ -6,12 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asteroid Avoidance</title>
     <script>
-        /*function checkForm(){
+        function checkForm(){
             if(document.getElementById('GameTitle').value == ""){
                 event.preventDefault()
                 document.getElementById('err').innerHTML = "Please enter a game title."
             }
-        }*/
+            else{
+
+                function combineText() {
+                    var nTxt = document.getElementById('GameTitle')
+                    var sTxt = document.getElementById('score')
+                    nTxt.value = sTxt.value + " " + nTxt.value
+                    document.getElementById('GameTitle').value = nTxt.value
+                }
+            }
+
+        }
+
     </script>
 </head>
 <body>
@@ -31,9 +42,12 @@
     </form> -->
 
     <canvas width="800" height="600" style="border:1px solid black; background-color: black;"></canvas>
-    <form method="post" action="/saveGame " class="highscore" onsubmit = "return checkForm()">
-        <input type="text" placeholder="Enter your name for High Score" style="position:absolute; left:300px; top:400px; width:200px;" id="GameTitle"/>
+    <p hidden id="score" >score</p>
+    <form action="/saveGame " method="post"  class="highscore" onsubmit = "return checkForm()">
+        <span id="err" style="color: red;"></span>
+        <input type="text" placeholder="Enter your name for High Score" style="position:absolute; left:300px; top:400px; width:200px;" id="GameTitle">
         <button style="position:absolute; left:350px; top:450px; width:100px;" type="submit">Submit</button>
+        
     </form>
     <script src="script.js"></script>
 

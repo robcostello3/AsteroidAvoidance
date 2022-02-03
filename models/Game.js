@@ -5,10 +5,6 @@ var GameScema = new Scema({
     game:{
         type:String,
         require:true
-    },
-    score:{
-        type:String,
-        require:true
     }
 })
 
