@@ -42,12 +42,12 @@
     </form> -->
 
     <canvas width="800" height="600" style="border:1px solid black; background-color: black;"></canvas>
-    <p hidden id="score" >score</p>
+    
     <form action="/saveGame " method="post"  class="highscore" onsubmit = "return checkForm()">
         <span id="err" style="color: red;"></span>
-        <input type="text" placeholder="Enter your name for High Score" style="position:absolute; left:300px; top:400px; width:200px;" id="GameTitle">
+        <input name="score" type="text" placeholder="Enter your name for High Score" style="position:absolute; left:300px; top:400px; width:200px;" id="GameTitle">
         <button style="position:absolute; left:350px; top:450px; width:100px;" type="submit">Submit</button>
-        
+        <p hidden id="score" name="scoreValue" >score</p>
     </form>
     <script src="script.js"></script>
 
